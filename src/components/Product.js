@@ -4,7 +4,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 //Bootstrap
-import { Col, Card, Button, Jumbotron } from 'react-bootstrap';
+import { Col, Card, Button } from 'react-bootstrap';
 
 export default function Product(props) {
     const { breakPoint, data } = props
