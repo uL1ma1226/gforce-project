@@ -13,7 +13,7 @@ export default function Product(props) {
 
     return (
 		<Col xs={12} md={breakPoint}>
-        <div className="p-3">
+        <div className="py-3">
 			<Card className="text-center productCard" id="card">
 				<Card.Body>
                     <Card.Title className="productCardTitle"><h3>{name}</h3></Card.Title>

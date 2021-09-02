@@ -1,5 +1,6 @@
 .productCard {
   min-height: 100%;
+  width: 100%;
 }
 
 .productCardTitle {
@@ -9,9 +10,8 @@
 }
 
 .productCardText {
-  height: 30vh;
-  white-space: pre-wrap;
-  
+  height: 35vh;
+  overflow: auto;
 }
 
 .qty {
