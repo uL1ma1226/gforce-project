@@ -1,38 +1,152 @@
-.App {
-  text-align: center;
+.productCard {
+  min-height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.productCardTitle {
+  height: 10vh;
+  font-family: Geforce, sans-serif;
+  color: #76b900;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.productCardText {
+  height: 30vh;
+  white-space: pre-wrap;
+  
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.qty {
+  width: 15% !important;
+}
+
+.card-header, .card-footer {
+  background-color: black !important;
+}
+
+.card {
+  border-color: #76b900 !important;
+}
+
+#input, #inputCart {
+  background-color: black;
+  border-color: #6c757d;
+  color: white;
+  font-size: 1.25rem;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+.app, #footer {
+  background-color: black;
+}
+
+.app {
+  padding-bottom: 25vh;
+}
+
+.pacman {
+  background-color: black;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-content: center;
+  padding-top: 40vh;
+  width: 100%;
+  height: 100vh;
+}
+
+td, p, .form-label{
+  color: white;
+  font-size: 1.25rem;
+}
+
+h1, h2, h3, h4, h5, #shop {
+  font-family: Geforce, sans-serif;
+  color: #76b900;
+  font-size: 1.5rem;
+}
+
+#navbar {
+  background-color: black;
+}
+
+.bgBanner {
+  background-size: cover;
+  background-image: url("./images/bg.jpg");
+  padding-top: 20vh;
+  min-height: 80vh;
+}
+
+.card-body {
+  background-color: black;
+}
+
+#card, .detailCard {
+  border-color: #76b900;
+  
+}
+
+.thead, .subBtn{
+  background-color: #76b900 !important;
+  border-color: #76b900 !important;
+}
+
+#btn, #addBtn {
+  background-color: #76b900 !important;
+  border-color: #76b900 !important;
+  font-family: Geforce, sans-serif;
+  font-size: 1.25rem;
+  width: 50%;
+  display: inline-flex;
+  justify-content: center;
+}
+
+.jumbotron {
+  background-color: black !important;
+  padding-bottom: 45vh !important;
+}
+
+.startShopBtn {
+  color: #76b900;
+}
+
+.shopBtn {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#cartPage {
+  padding-bottom: 30vh;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#contForm {
+  padding: 20vh 10vh 10vh 10vh;
+}
+
+#regForm {
+  padding: 10vh;
+}
+
+#orderCont {
+  padding-bottom: 30vh;
+}
+
+.thQty {
+  width: 50%;
+}
+
+.navbar-nav :hover{
+  color: #76b900 !important;
+}
+
+#gforce :hover{
+  color: white !important;
+}
+
+.footerHTML {
+  font-size: 1rem !important;
+  color: white;
+}
+
+.fab {
+  color: #76b900;
 }
