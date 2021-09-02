@@ -4,7 +4,7 @@
 
 .productCardTitle {
   height: 10vh;
-  font-family: Geforce, sans-serif;
+  font-family: Chakra Petch, sans-serif;
   color: #76b900;
 }
 
@@ -61,7 +61,7 @@ td, p, .form-label{
 }
 
 h1, h2, h3, h4, h5, #shop {
-  font-family: Geforce, sans-serif;
+  font-family: Chakra Petch, sans-serif;
   color: #76b900;
   font-size: 1.5rem;
 }
@@ -94,7 +94,7 @@ h1, h2, h3, h4, h5, #shop {
 #btn, #addBtn {
   background-color: #76b900 !important;
   border-color: #76b900 !important;
-  font-family: Geforce, sans-serif;
+  font-family: Chakra Petch, sans-serif;
   font-size: 1.25rem;
   width: 50%;
   display: inline-flex;
