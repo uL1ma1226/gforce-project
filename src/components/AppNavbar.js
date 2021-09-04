@@ -26,7 +26,7 @@ export default function AppNavbar() {
                             <Link className="nav-link" to="/login">Log In</Link>
                         </>
     )
-
+    
     const adminStmnt = (user.accessToken !== null
                             ? user.isAdmin === true
                                     ?
@@ -46,9 +46,9 @@ export default function AppNavbar() {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     <Nav.Link as={NavLink} to="/" id="gforce"><h5>GForce</h5></Nav.Link>
-                    <Link className="nav-link pt-2" to="/products">
+                    <Nav.Link as={Link} className="nav-link pt-2" to="/products">
                     {adminStmnt}
-                    </Link>
+                    </Nav.Link>
                 </Nav>
                 <Nav className="ml-auto">
                     {condStmnt}

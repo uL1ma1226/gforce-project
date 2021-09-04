@@ -16,7 +16,6 @@ export default function Login() {
 
     const history = useHistory();
     const { user, setUser } = useContext(UserContext);
-
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [btnActive, setBtnActive] = useState(true);
@@ -39,11 +38,42 @@ export default function Login() {
                 setPassword('');
 
                 localStorage.setItem('accessToken', data.accessToken);
-                userDetails(data.accessToken)
-                // setUser({
-                //     accessToken: localStorage.getItem('accessToken')
-                // })
                 console.log(`Welcome back!`);
+
+                fetch(`${process.env.REACT_APP_API_URL}/users/`, {
+                    headers: {'Content-Type': 'application/json',
+                    authorization: `Bearer ${localStorage.getItem(`accessToken`)}`
+                }
+            })
+            .then(res=>res.json())
+            .then(data => {
+                console.log(data);
+                setUser({ id: data._id, isAdmin: data.isAdmin})
+                if(data.isAdmin === true){
+            
+                    localStorage.setItem('email', data.email);
+                    localStorage.setItem('isAdmin', data.isAdmin);
+            
+                    setUser({
+                        email: localStorage.getItem('email'),
+                        isAdmin: localStorage.getItem('isAdmin')
+                    })
+                    
+                    history.push('/products')
+                    window.location.reload(false)
+                } else {
+                    localStorage.setItem('email', data.email);
+                    localStorage.setItem('isAdmin', data.isAdmin);
+            
+                    setUser({
+                        email: localStorage.getItem('email'),
+                        isAdmin: localStorage.getItem('isAdmin')
+                    })
+            
+                    history.push('/')
+                }
+                
+            })
 
                 
             }else{
@@ -57,43 +87,11 @@ export default function Login() {
         
     }
     
-    const userDetails = () => {
+    // const userDetails = () => {
 
-        fetch(`${process.env.REACT_APP_API_URL}/users/`, {
-            headers: {'Content-Type': 'application/json',
-            authorization: `Bearer ${localStorage.getItem(`accessToken`)}`
-        }
-    })
-    .then(res=>res.json())
-    .then(data => {
-        console.log(data);
-        setUser({ id: data._id, isAdmin: data.isAdmin})
-        if(data.isAdmin === true){
-    
-            localStorage.setItem('email', data.email);
-            localStorage.setItem('isAdmin', data.isAdmin);
-    
-            setUser({
-                email: localStorage.getItem('email'),
-                isAdmin: localStorage.getItem('isAdmin')
-            })
-            
-            history.push('/products')
-        } else {
-            localStorage.setItem('email', data.email);
-            localStorage.setItem('isAdmin', data.isAdmin);
-    
-            setUser({
-                email: localStorage.getItem('email'),
-                isAdmin: localStorage.getItem('isAdmin')
-            })
-    
-            history.push('/')
-        }
         
-    })
 
-    }
+    // }
 
     useEffect(() => {
         if(email !== '' && password !== ''){
