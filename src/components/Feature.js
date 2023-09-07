@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 //Bootstrap
-import { CardGroup, CardColumns } from 'react-bootstrap';
+import { CardGroup } from 'react-bootstrap';
 
 //Component
 import Product from './Product';

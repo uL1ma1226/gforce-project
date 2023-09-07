@@ -15,7 +15,8 @@ import Swal from 'sweetalert2';
 export default function Login() {
 
     const history = useHistory();
-    const { user, setUser } = useContext(UserContext);
+    // eslint-disable-next-line
+    const { user, setUser } = useContext(UserContext); 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [btnActive, setBtnActive] = useState(true);

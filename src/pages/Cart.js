@@ -62,7 +62,7 @@ export default function Cart() {
 		})
 		setTotal(tempTotal)
 
-    
+    // eslint-disable-next-line
 	}, [cart])
 
 		const qtyInput = (productId, value) => {

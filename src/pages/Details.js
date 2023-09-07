@@ -33,6 +33,7 @@ export default function Details() {
             setDescription(data.description)
             setPrice(data.price)
         })
+        // eslint-disable-next-line
     }, [])
 
     const reduceQty = () => {

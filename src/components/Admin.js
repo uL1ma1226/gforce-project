@@ -79,6 +79,7 @@ export default function Admin(props) {
         })
         console.log(productArr)
         setProducts(productArr)
+        // eslint-disable-next-line
     }, [productData])
 
     const addProduct = e => {
